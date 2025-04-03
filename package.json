@@ -1,24 +1,35 @@
 {
-  "name": "squarewait",
-  "version": "0.1.0",
+  "name": "dr-tomorrow",
+  "version": "1.0.0",
   "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": "22.14.0"
+  },
+  "packageManager": "bun@1.2.5",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve": "serve out"
   },
   "dependencies": {
+    "next": "^15.3.0-canary.31",
+    "rand-seed": "^2.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "autoprefixer": "^10.4.21",
+    "babel-plugin-react-compiler": "^19.0.0-beta-e993439-20250328",
+    "critters": "^0.0.25",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
