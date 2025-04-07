@@ -35,16 +35,14 @@ jobs:
                 bun-version: "1.2.5"
 
             - name: Cache dependencies
-              id: cache
               uses: actions/cache@v4
               with:
                 path: ~/.bun/install/cache
-                key: "${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}"
+                key: "${{ runner.os }}-bun-${{ hashFiles('**/bun.lock', '**/package.json') }}"
                 restore-keys: |
                   ${{ runner.os }}-bun-
 
             - name: Install dependencies
-              if: steps.cache.outputs.cache-hit != 'true'
               run: bun install --frozen-lockfile
 
             - name: Build project
