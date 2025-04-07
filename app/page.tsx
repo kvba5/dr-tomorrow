@@ -10,7 +10,7 @@ export default function Home() {
   return <div className="py-midscreen mx-4 flex flex-col gap-20 text-center w-full relative max-w-3xl left-1/2 -translate-x-1/2">
     <header className="flex flex-col items-center">
       <Image height={80} alt="Deltarune Title" src={DeltaruneTitle} priority={true} draggable={false} />
-      <h1 className="mt-3">"DELTARUNE TOMOMORROW"</h1>
+      <h1 className="mt-3">"DELTARUNE TOMORROW"</h1>
     </header>
     <div className="flex flex-col gap-5 place-items-center mb-midscreen">
       <Progress />
